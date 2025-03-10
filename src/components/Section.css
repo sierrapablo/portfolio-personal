@@ -1,5 +1,4 @@
-/* Hero */
-.heroContainer {
+.sectionContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -7,15 +6,13 @@
   height: calc(100vh - 4rem);
   text-align: center;
   position: relative;
-  background: url('/src/assets/arch-1-nologo.jpg') center/cover no-repeat;
+  background: center/cover no-repeat;
   color: #fff;
   padding: 2rem;
-  background-size: cover;
-  background-position: center;
   z-index: 1;
 }
 
-.heroOverlay {
+.sectionOverlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -25,7 +22,7 @@
   z-index: 2;
 }
 
-.heroTitle {
+.sectionTitle {
   font-size: 4rem;
   font-weight: 600;
   opacity: 0;
@@ -36,38 +33,38 @@
   position: relative;
 }
 
-.heroTitle.description {
+.sectionSubtitle,
+.sectionParagraph {
   font-size: 1.5rem;
+  opacity: 0;
+  animation: fadeIn 2s ease forwards;
+  margin: 0.25rem;
+  line-height: 1;
+  z-index: 2;
+  position: relative;
 }
 
-/* Animación para los títulos */
 @keyframes fadeIn {
   0% {
     opacity: 0;
     transform: translateY(50px);
   }
-
   100% {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-.heroTitle.name {
-  animation-delay: 0.5s;
-}
-
-.heroTitle.description {
-  animation-delay: 1s;
-}
-
-/* Ajustes para pantallas más pequeñas */
 @media (max-width: 768px) {
-  .heroContainer {
+  .sectionContainer {
     padding: 1rem;
   }
 
-  .heroTitle {
+  .sectionTitle {
     font-size: 2.5rem;
+  }
+
+  .sectionSubtitle {
+    font-size: 1rem;
   }
 }
