@@ -1,5 +1,21 @@
 .infoCard-container {
+  padding-top: 4rem;
   display: flex;
   justify-content: center;
+}
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 25vh !important;
+  position: relative;
+  background: center/cover no-repeat;
+  color: #fff;
+  padding: 2rem;
+  z-index: 1;
+  padding-top: 42vh;
 }
 
