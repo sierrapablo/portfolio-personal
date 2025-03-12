@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+.grid {
+  justify-content: center;
+  align-items: center;
+  /* height: calc(100vh - 4rem); */
+  position: relative;
+  background: center/cover no-repeat;
+  color: #fff;
+  padding: 2rem;
+  z-index: 1;
+  width: 930px;
+}
+
+.element {
+  border: 1px solid #e1e8ed;
+  height: 116px;
+}
+
+#gallery-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 25vh !important;
+  position: relative;
+  background: center/cover no-repeat;
+  color: #fff;
+  padding: 2rem;
+  z-index: 1;
+  padding-top: 20vh;
+}
+
+#elementView {
+  height: 50vh;
+}

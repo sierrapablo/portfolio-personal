@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Hero from "./sections/hero/Hero"
 import About from "./sections/about/About"
 import Contact from "./sections/contact/Contact"
+import GalleryGrid from './components/GalleryGrid'
 
 function App() {
   const [visibleSection, setVisibleSection] = useState('hero')
@@ -10,12 +11,14 @@ function App() {
     if (event.deltaY > 0) {
       setVisibleSection((prevSection) => {
         if (prevSection === 'hero') return 'about'
-        if (prevSection === 'about') return 'contact'
+        if (prevSection === 'about') return 'gallery'
+        if (prevSection === 'gallery') return 'contact'
         return prevSection
       })
     } else if (event.deltaY < 0) {
       setVisibleSection((prevSection) => {
-        if (prevSection === 'contact') return 'about'
+        if (prevSection === 'contact') return 'gallery'
+        if (prevSection === 'gallery') return 'about'
         if (prevSection === 'about') return 'hero'
         return prevSection
       })
@@ -39,6 +42,9 @@ function App() {
       </div>
       <div className={`section-component ${visibleSection === 'about' ? 'visible' : ''}`}>
         <About />
+      </div>
+      <div className={`section-component ${visibleSection === 'gallery' ? 'visible' : ''}`} id="gallery">
+        <GalleryGrid />
       </div>
       <div className={`section-component ${visibleSection === 'contact' ? 'visible' : ''}`}>
         <Contact />
